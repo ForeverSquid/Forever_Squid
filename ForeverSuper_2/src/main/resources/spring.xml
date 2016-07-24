@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:p="http://www.springframework.org/schema/p"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:aop="http://www.springframework.org/schema/aop" xmlns:tx="http://www.springframework.org/schema/tx"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+    	 http://www.springframework.org/schema/beans/spring-beans.xsd
+     	 http://www.springframework.org/schema/context
+         http://www.springframework.org/schema/context/spring-context.xsd
+         http://www.springframework.org/schema/aop
+         http://www.springframework.org/schema/aop/spring-aop.xsd
+         http://www.springframework.org/schema/tx
+     	 http://www.springframework.org/schema/tx/spring-tx.xsd">
+
+	<!-- spring容器的bean配置 -->
+	
+	<!-- dao对象 -->
+	<bean id="userDao" class="com.Forever.dao.UserDao" scope="singleton" lazy-init="default">
+		<property name="sf" ref="sessionFactory"></property>	
+	</bean>
+		
+	<!-- service对象 -->
+	<bean id="userService" class="com.Forever.service.UserService">
+		 <property name="dao" ref="userDao"></property>
+	</bean>
+	
+<!--  	action对象 -->
+	 <bean name="userAction" class="com.Forever.action.UserAction">
+		<property name="service" ref="userService"></property>
+	</bean>  
+
+	<!-- ###########Spring与Hibernate整合  start########### -->
+	
+	<!-- 方式（1）直接加载hibernate.cfg.xml文件的方式整合-->
+	<bean id="sessionFactory" class="org.springframework.orm.hibernate3.LocalSessionFactoryBean">
+		<property name="configLocation" value="classpath:hibernate.cfg.xml"></property>
+	</bean>    
+
+</beans>     
+

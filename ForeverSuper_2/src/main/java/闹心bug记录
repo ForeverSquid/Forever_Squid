@@ -1,0 +1,7 @@
+service层FileUploadServlet中调用dao.add时   spring对dao属性注入不能实现
+UserAction中加入ServletActionContext后就会出现srping.xml中userAction注入失败错误  部署出错！
+HttpServletRequest request = ServletActionContext.getRequest()拆开就好使了  不明白~
+the request doesn't contain a multipart/form-data or multipart/mixed stream, content type header is null    //welcome.jsp中加入图片路径就会出现这个错误 并且图片显示不了
+点赞     换成图片链接就会出现上条错误
+update失败，id，count没错
+ajax无法捕获两个以上的button重复id按钮点击事件 只有第一条信息好使
