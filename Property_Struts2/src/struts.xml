@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 2.1//EN" "http://struts.apache.org/dtds/struts-2.1.dtd">
+<struts>
+ 	<constant name="struts.enable.DynamicMethodInvocation" value="true" />
+ 	<package name="default" extends="struts-default">
+		<action name="send" class="com.Forever.action.UserAction">
+			<result name="success2">/success2.jsp</result>
+ 			<result name="defeat">/defeat.jsp</result>
+ 			<result name="no">/no.jsp</result>
+ 			<result name="houst_fenping">/houst_fenping.jsp</result>
+ 			<result name="house_dian">/house_dian.jsp</result>
+ 			<result name="house_shui">/house_shui.jsp</result>
+ 			<result name="house_re">/house_re.jsp</result>
+ 			<result name="house_wygl">/house_wygl.jsp</result>
+ 			<result name="guanli">/guanli.jsp</result>
+ 			<result name="zhiyuan">/zhiyuan.jsp</result>
+ 			<result name="housewelcome">/Page/housewelcome.jsp</result>
+ 		</action>
+ 		<action name="UserServlet" class="com.Forever.action.UserAction" method="check_zhiyuan_name">
+ 			<result name="">/index.jsp</result>
+ 		</action>
+ 	</package>
+</struts>
