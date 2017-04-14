@@ -1,0 +1,13 @@
+@charset "utf-8";
+
+body{font-size:14px;font-family:"\5FAE\8F6F\96C5\9ED1",Arial,Helvetica,sans-serif;background:#fff;overflow-x:hidden;background:url(../images/css_single/mob_bg.gif) 0 0 repeat;}
+h1,h2,h3,h4,h5,h6{font-weight:normal;}
+
+.container{width:960px;max-width:960px;margin:auto;}
+.opacity_50{filter: alpha(opacity=50);-khtml-opacity:0.5;-moz-opacity:0.5;opacity:0.5;}
+.fl{float:left;}
+.fr{float:right;}
+.clearfix:after{position:relative;z-index:99;clear:both;content:".";display:block;font-size:0;line-height:0;visibility:hidden;width:0;height:0}
+.valid_wrap{float:left;margin-left:10px;height:36px;line-height:36px;overflow:hidden; font-size:12px;font-family:'\5B8B\4F53',Verdana, Geneva, sans-serif;}
+
+

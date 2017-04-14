@@ -30,14 +30,14 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 	<br/><br/><br/><br/>
 	<table align="center" border="2"  width="300" height="120"">
 		<tr>
-			<th>您的水费余额(元)</th>
-			<th>上次缴费时间</th>
+			<th>请假流水编号</th>
+			<th>请假时间</th>
 		</tr>
 		<tr>
 			<td><%=cuser.getShui()%></td>
 			<td><%=cuser.getCshui_date()%></td>
 		</tr>
 	</table>
-	<h4>收费规则：3元/天，每天早六点结算</h4><a href="Page/housewelcome.jsp">点击小区留言</a>
+	<h4></h4><a href="Page/housewelcome.jsp">点击小区留言</a>
   </body>
 </html>

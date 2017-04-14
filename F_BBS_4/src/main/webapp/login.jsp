@@ -24,7 +24,7 @@
 						id="login_form">
 
 
-						<div class="alert alert-info">请登录易圣通灌水大乐园，请不要发布违法信息，否则，你懂得！</div>
+						<div class="alert alert-info">请登录小艺爱祖国网站论坛，请不要发布违法信息，否则，你懂得！</div>
 
 
 						<div class="cnt_b">

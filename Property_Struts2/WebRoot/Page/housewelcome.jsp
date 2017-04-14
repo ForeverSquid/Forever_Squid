@@ -31,8 +31,8 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 		IUserDao dao=new UserDaoImpl();
 		list=dao.queryMes();
 	%>
-	<h1 align="center" style="color:red">欢迎住户登录本物业系统！</h1><br/>
-	<h2>小区留言</h2>
+	<h1 align="center" style="color:red">欢迎登录办公自动化系统！</h1><br/>
+	<h2>公司内部留言</h2>
 	<form action="send!setMes" method="post">
 		<input type="text" name="mes" id="mes"/>
 		<input type="hidden" name="mdanyuan" value="<%=user1.getDanyuan() %>">

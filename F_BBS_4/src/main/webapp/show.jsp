@@ -7,7 +7,7 @@
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <meta http-equiv="cache-control" content="no-cache">
-<title>易圣通灌水大乐园</title>
+<title>小艺爱祖国网站论坛</title>
 
 <!-- Bootstrap framework -->
 <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css" />
@@ -104,7 +104,7 @@
 					<div class="container-fluid">
 						
 						<a class="brand" href="http://www.papaok.org"><i
-							class="icon-home icon-white"></i> 易圣通灌水大乐园 <span class="sml_t">2.0</span></a>
+							class="icon-home icon-white"></i> 小艺爱祖国论坛 <span class="sml_t">2.0</span></a>
 
 
 						<ul class="nav user_menu pull-right">

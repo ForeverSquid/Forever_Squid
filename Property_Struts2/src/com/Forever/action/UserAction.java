@@ -140,6 +140,11 @@ public class UserAction {
 		dao.setMes(Integer.parseInt(request.getParameter("mdanyuan")), request.getParameter("mes"));
 		return "housewelcome";
 	}
+	
+	public String writeinf(){
+		dao.setMesInf(inf);
+		return "guanli";
+	}
 
 	private String huzhu_name;
 	private String password;
@@ -147,7 +152,16 @@ public class UserAction {
 	private int area;
 	private String guanli_name;
 	private String guanli_password;
+	private String inf;
 	
+
+	public String getInf() {
+		return inf;
+	}
+
+	public void setInf(String inf) {
+		this.inf = inf;
+	}
 
 	public String getGuanli_name() {
 		return guanli_name;

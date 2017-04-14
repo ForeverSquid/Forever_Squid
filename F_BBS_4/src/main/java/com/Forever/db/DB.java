@@ -14,7 +14,7 @@ public class DB {
 			
 			Class.forName("org.gjt.mm.mysql.Driver");
 
-			conn=DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/test?useUnicode=true&characterEncoding=utf-8&autoReconnect=true", "root", "");
+			conn=DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/test?useUnicode=true&characterEncoding=utf-8", "root", "root");
 			
 		} catch (Exception e) {
 			// TODO: handle exception

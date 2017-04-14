@@ -5,6 +5,15 @@ public class MesUser {
 	public int danyuan;
 	public String time;
 	public String mes;
+	public String inf;
+	
+	
+	public String getInf() {
+		return inf;
+	}
+	public void setInf(String inf) {
+		this.inf = inf;
+	}
 	public int getDanyuan() {
 		return danyuan;
 	}

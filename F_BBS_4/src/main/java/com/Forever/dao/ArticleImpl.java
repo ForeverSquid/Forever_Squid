@@ -10,8 +10,7 @@ import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
-
-import com.Forever.db.DBCPDB;
+import com.Forever.db.DB;
 import com.Forever.vo.Article;
 import com.Forever.vo.PageBean;
 import com.Forever.vo.User;
@@ -21,7 +20,7 @@ public class ArticleImpl implements IArticleDao {
 	private Connection conn;
 
 	public ArticleImpl(){
-		conn=DBCPDB.getConnection();
+		conn=DB.getConnection();
 	}
 
 	@Override
@@ -60,9 +59,6 @@ public class ArticleImpl implements IArticleDao {
 	}
 
 	
-
-	
-
 	@Override
 	public boolean delArticle(int id) {
 		// TODO Auto-generated method stub

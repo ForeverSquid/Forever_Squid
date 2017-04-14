@@ -1,0 +1,84 @@
+@charset "utf-8";
+
+.idx_common_bg{background:url(../images/xing.png) repeat left top}
+.omega{margin-right:0 !important;}
+
+
+/*-----title-----*/
+.idx_musician{position:relative;width:100%;height:auto;padding:70px 0;}
+.webinsert_title{position:relative;width:100%;text-align:center;}
+.webinsert_title p{font-size:12px;color:#999;padding:5px 40px 20px 40px;text-align:center;line-height:24px;font-family:'\5B8B\4F53';}
+.musician_wrapper{position:relative;margin-top:28px;width:960px !important;height:445px !important;}
+.musician_slider{height:405px !important;}
+.musician_slider li{float:left;width:960px !important;height:100%;padding:0;display:block;}
+.musician_snav{text-align:center;margin-top:30px;}
+.musician_snav a{display:inline-block;margin:0 2px;width:18px;height:18px;border:1px solid #aaa;border-radius:50%;}
+.musician_snav a span{font-size:0;}
+.musician_snav .selected{background:#aaa;}
+.musician_items{float:left;width:220px;height:385px;overflow:hidden;text-align:center;display:inline-block;margin:10px;_margin:10px 5px;background:#fff;cursor:pointer;}
+.musician_items h4{margin:13px 0 0 0;padding:0;text-transform:none;height:30px;font-size:16px;line-height:30px;color:#333;overflow:hidden;}
+.musician_items h4 a{height:30px;line-height:30px;color:#333;}
+.musician_items .label{font-size:12px;font-family:"宋体",sans-serif;text-transform:none;transition:all 0.2s ease-in-out;-moz-transition:all 0.2s ease-in-out;-webkit-transition:all 0.2s ease-in-out;-o-transition:all 0.2s ease-in-out;color:#999;text-align:center;}
+.musician_items .label.label_id{float:left;width:200px;height:22px;line-height:22px;overflow:hidden;padding:0 10px;}
+.musician_items .label.label_sty{float:left;width:200px;height:22px;line-height:22px;margin-bottom:14px;overflow:hidden;padding:0 10px;}
+.musician_total{float:left;width:220px;height:64px;}
+.musician_total .total_sum{float:left;width:110px;height:64px;display:inline-block;}
+.musician_total .total_sum a{float:left;width:110px;height:64px;overflow:hidden;color:#fff;text-decoration:none;-webkit-transition:all 0.2s linear;-moz-transition:all 0.2s linear;-o-transition:all 0.2s linear;transition:all 0.2s linear;}
+
+
+/*total*/
+a.total_song {background:#28cbb6;}
+a.total_song:hover {background:#89bf43;}
+a.total_ting {background:#38dec8;}
+a.total_ting:hover {background:#7ea548;}
+
+.total_inner{width:100px;height:40px;line-height:25px; padding:5px; text-align:center;}
+.total_inner .inner_title{ font-size:12px;font-family:'\5B8B\4F53';}
+.total_inner .inner_num{ font-size:24px;font-family:'\5FAE\8F6F\96C5\9ED1',Verdana, Geneva, sans-serif}
+
+
+
+
+/*---------------------Hover Animate-------------------------*/
+.hover_img1,.hover_img2,.hover_img3,.hover_img4{overflow:hidden;position:relative;background:#fff;}
+.hover_img1 .hover_item,.hover_img2 .hover_item,.hover_img3 .hover_item,.hover_img4 .hover_item{position:absolute;left:0;right:0;transition:all 0.3s ease-in-out;-moz-transition:all 0.3s ease-in-out;-webkit-transition:all 0.3s ease-in-out;-o-transition:all 0.3s ease-in-out;}
+.hover_img1{height:220px;width:220px;-webkit-transition:all 0.3s linear;-moz-transition:all 0.3s linear;-o-transition:all 0.3s linear;transition:all 0.3s linear;}
+.hover_img2{height:280px;width:280px;-webkit-transition:all 0.3s linear;-moz-transition:all 0.3s linear;-o-transition:all 0.3s linear;transition:all 0.3s linear;}
+.hover_img3{height:50px;width:50px;-webkit-transition:all 0.3s linear;-moz-transition:all 0.3s linear;-o-transition:all 0.3s linear;transition:all 0.3s linear;}
+.hover_img4{height:263px;width:468px;-webkit-transition:all 0.3s linear;-moz-transition:all 0.3s linear;-o-transition:all 0.3s linear;transition:all 0.3s linear;}
+
+.hover_img1 .hover_item{top:-220px;height:220px;background:url(../images/xing.png) center center no-repeat;}
+.hover_img2 .hover_item{bottom:-280px;height:280px;background:url(../images/xing.png) center center no-repeat;}
+.hover_img3 .hover_item{bottom:-50px;height:50px;background:url(../images/xing.png) center center no-repeat;}
+.hover_img4 .hover_item{bottom:-263px;height:263px;background:url(../images/xing.png) center center no-repeat;}
+
+.hover_img1:hover .hover_item{top:0;}
+.hover_img2:hover .hover_item{bottom:0;}
+.hover_img3:hover .hover_item{bottom:0;}
+.hover_img4:hover .hover_item{bottom:0;}
+
+.hover_img1:hover .hover_item a{display:block;width:220px;height:220px; cursor:pointer;}
+.hover_img2:hover .hover_item a{display:block;width:280px;height:280px; cursor:pointer;}
+.hover_img3:hover .hover_item a{display:block;width:50px;height:50px; cursor:pointer;}
+.hover_img4:hover .hover_item a{display:block;width:468px;height:263px; cursor:pointer;}
+
+/* ................... */
+.idx_composition{position:relative;width:100%;height:auto;padding:70px 0}
+
+.cptn_show .cptn_pic{width:280px;height:280px;overflow:hidden}
+.cptn_show .cptn_oper{width:280px;height:50px;cursor:pointer;background:#fff}
+.cptn_show:hover .cptn_oper{background:#28cbb5;-webkit-transition:all 0.3s linear;-moz-transition:all 0.3s linear;-o-transition:all 0.3s linear;transition:all 0.3s linear;}
+
+.cptn_items{width:308px;height:330px;padding-left:32px}
+.cptn_items li{float:left;width:308px;height:50px;margin-bottom:20px;background:#fff;cursor:pointer}
+.cptn_items li a{color:#333}
+.cptn_items li .cptn_mpic{width:50px;height:50px;float:left}
+.cptn_items li.omega{padding-bottom:0 !important;}
+.cptn_items li:hover{background:#28cbb5;-webkit-transition:all 0.3s linear;-moz-transition:all 0.3s linear;-o-transition:all 0.3s linear;transition:all 0.3s linear;}
+.cptn_items li:hover .cptn_title,.cptn_items li:hover .cptn_info,.cptn_items li:hover a{color:#fff}
+
+.cptn_status{float:right;height:32px;width:32px;margin:9px;cursor:pointer}
+.cptn_status a{float:left;height:32px;width:32px;display:block;}
+.cptn_title{font-size:16px;color:#333;cursor:pointer}
+.cptn_info{float:left;padding:5px 10px;line-height:20px;font-size:12px;color:#999}
+.idx_play,.idx_play:hover,.idx_pause,.idx_pause:hover{background-image:url(../images/photo.jpg);background-repeat:no-repeat}

@@ -257,7 +257,7 @@ public class UserDaoImpl implements IUserDao {
 		PreparedStatement pstmt=null;
 		ResultSet rs=null;
 		try {
-			String sql="select * from mess";
+			String sql="select * from mess where danyuan!='null'";
 			pstmt=conn.prepareStatement(sql);
 
 			rs=pstmt.executeQuery();
@@ -267,6 +267,42 @@ public class UserDaoImpl implements IUserDao {
 				user.setDanyuan(rs.getInt("danyuan"));
 				user.setTime(rs.getString("time"));
 				user.setMes(rs.getString("mes"));
+				list.add(user);				
+			}
+
+		} catch (Exception e) {
+			// TODO: handle exception
+			e.printStackTrace();
+		}finally{
+			try {
+				rs.close();
+				pstmt.close();
+			} catch (SQLException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}			
+
+			DB.closeConnection();
+		}
+		return list;
+	}
+	
+	@Override
+	public List<MesUser> queryMesinf() {
+		// TODO Auto-generated method stub
+		List<MesUser> list=new ArrayList<MesUser>();
+		Connection conn=DB.getConnection();
+		PreparedStatement pstmt=null;
+		ResultSet rs=null;
+		try {
+			String sql="select inf from mess where inf!='null'";
+			pstmt=conn.prepareStatement(sql);
+
+			rs=pstmt.executeQuery();
+
+			while(rs.next()){
+				MesUser user=new MesUser();
+				user.setInf(rs.getString("inf"));
 				list.add(user);				
 			}
 
@@ -356,7 +392,6 @@ public class UserDaoImpl implements IUserDao {
 		// TODO Auto-generated method stub
 		Connection conn=DB.getConnection();
 		PreparedStatement pstmt=null;
-		boolean flag=false;
 		SimpleDateFormat sss=new SimpleDateFormat("yyyy-MM-dd");
 		try {
 			String sql="insert into mess(danyuan,time,mes) values(?,?,?)";
@@ -378,6 +413,30 @@ public class UserDaoImpl implements IUserDao {
 				e.printStackTrace();
 			}			
 
+			DB.closeConnection();
+		}
+	}
+	
+	@Override
+	public void setMesInf(String mes) {
+		// TODO Auto-generated method stub
+		Connection conn=DB.getConnection();
+		PreparedStatement pstmt=null;
+		try {
+			String sql="insert into mess(inf) values(?)";
+			pstmt=conn.prepareStatement(sql);
+			pstmt.setString(1, mes);
+			pstmt.executeUpdate();
+		} catch (Exception e) {
+			// TODO: handle exception
+			e.printStackTrace();
+		}finally{
+			try {
+				pstmt.close();
+			} catch (SQLException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}			
 			DB.closeConnection();
 		}
 	}

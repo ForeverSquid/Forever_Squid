@@ -29,29 +29,27 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 		List<AllUser> list=new ArrayList<AllUser>();
 		list=(List<AllUser>)session.getAttribute("guanli_list");
 	%>
-	<h4 align="right">欢迎您<%=guser.getGuanli_name() %>先生&nbsp;<a href="index.jsp">点击退出登录</a></h4>
-	<h4>管理所有住户费用,点击清算所有用户前一天费用：</h4>
-	<h2><a href="send!qingsuan">清算</a></h2>
-	
-	<h4><a href="send!zhiyuan">点击查看小区职员表</a></h4>
-	<a href="addzhiyuan.jsp">点击添加职员</a>
+	<h4 align="right">欢迎您&nbsp;<%=guser.getGuanli_name() %>&nbsp;King&nbsp;<a href="index.jsp">点击退出登录</a></h4>
+	<h4>管理所有公司人员的一切权利：</h4>
+	<h2><a href="send!qingsuan"></a></h2>
+	<h4><a href="writeInf.jsp">点击编辑对外发布信息</a></h4>
+	<h4><a href="send!zhiyuan">点击查看公司管理人员信息</a></h4>
+	<a href="addzhiyuan.jsp">点击添加公司管理人员</a>
 	
 	<h3>以下是所有住户的所有信息：</h3>
 	<table border="1" align="center">
 		<tr>
-			<th>单元号</th>
-			<th>户主名</th>
+			<th>工号</th>
+			<th>人员姓名</th>
 			<th>密码</th>
-			<th>人口数</th>
-			<th>楼面积</th>
-			<th>电费剩余</th>
-			<th>上次交电费日期</th>
-			<th>水费剩余</th>
-			<th>上次交水费日期</th>
-			<th>热费剩余</th>
-			<th>上次交热费日期</th>
-			<th>物业管理费剩余</th>
-			<th>上次交物业管理费日期</th>
+			<th>教学楼号</th>
+			<th>所属区号</th>
+			<th>所属部门号</th>
+			<th>入职时间</th>
+			<th>请假流水号</th>
+			<th>请假日期</th>
+			<th>获奖数量</th>
+			<th>获奖时间日期</th>
 			<th>备注</th>
 		</tr>
 	<%
@@ -69,8 +67,6 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 				<td><%=user.getCshui_date() %></td>
 				<td><%=user.getRe() %></td>
 				<td><%=user.getCre_date() %></td>
-				<td><%=user.getWygl() %></td>
-				<td><%=user.getCwygl_date() %></td>
 				<td><%=user.getBeizhu() %></td>
 			</tr>
 		<%	

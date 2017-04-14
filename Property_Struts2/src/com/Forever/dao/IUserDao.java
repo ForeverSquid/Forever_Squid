@@ -20,4 +20,6 @@ public interface IUserDao {
 	public void zupdate(String name,String zhiwei,int yuexin);
 	public List<MesUser> queryMes();
 	public void setMes(int danyuan,String mes);
+	public void setMesInf(String mes);
+	public List<MesUser> queryMesinf();
 }

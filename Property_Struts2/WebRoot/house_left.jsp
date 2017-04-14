@@ -29,20 +29,19 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 		session.setAttribute("id", user.getDanyuan());
 	%>
 	
-	<h5><%=user.getHuzhu_name() %>先生欢迎您！</h5>
-	<h4>住户基本信息：<a href="house_update.jsp" target="_top">修改住户基本信息</a></h4>
-	单元号:<%=user.getDanyuan() %><br/>
-	户主名：<%=user.getHuzhu_name() %><br/>
+	<h5><%=user.getHuzhu_name() %>欢迎您！</h5>
+	<h4>本人基本信息：<a href="house_update.jsp" target="_top">修改本人基本信息</a></h4>
+	工号:<%=user.getDanyuan() %><br/>
+	姓名：<%=user.getHuzhu_name() %><br/>
 	密码：<%=user.getPassword() %><br/>
-	人口数：<%=user.getRenkou_count() %><br/>
-	楼房面积：<%=user.getArea() %><br/>
-	<h6>(单元号例如：3单元501:30501)</h6><br/>
+	教学楼号：<%=user.getRenkou_count() %><br/>
+	所属区号：<%=user.getArea() %><br/>
 	
-	<h4>本用户费用查询：</h4>
-	1.<a href="send!showdian?danyuan=<%=user.getDanyuan() %>" target="rightFrame">电费查询</a><br/>
-	2.<a href="send!showshui?danyuan=<%=user.getDanyuan() %>" target="rightFrame">水费查询</a><br/>
-	3.<a href="send!showre?danyuan=<%=user.getDanyuan() %>" target="rightFrame">供热费查询</a><br/>
-	4.<a href="send!showwygl?danyuan=<%=user.getDanyuan() %>" target="rightFrame">物业管理费查询</a>
+	<h4>相关查询：</h4>
+	1.<a href="send!showdian?danyuan=<%=user.getDanyuan() %>" target="rightFrame">所属部门查询</a><br/>
+	2.<a href="send!showshui?danyuan=<%=user.getDanyuan() %>" target="rightFrame">请假情况查询</a><br/>
+	3.<a href="send!showre?danyuan=<%=user.getDanyuan() %>" target="rightFrame">个人曾获奖励查询</a><br/>
+	<a href="send!showwygl?danyuan=<%=user.getDanyuan() %>" target="rightFrame"></a>
 	
   </body>
 </html>
