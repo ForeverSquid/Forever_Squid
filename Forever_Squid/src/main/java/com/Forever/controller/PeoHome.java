@@ -1,0 +1,14 @@
+package com.Forever.controller;
+
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.RequestMapping;
+
+@Controller
+@RequestMapping("/peohome")
+public class PeoHome {
+	
+	@RequestMapping("/peoShowToHome")
+	public String aboutUs(){
+		return "peoHomePage";
+	}
+}

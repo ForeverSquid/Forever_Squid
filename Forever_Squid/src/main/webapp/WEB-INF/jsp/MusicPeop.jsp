@@ -29,17 +29,17 @@
 				<li>
 					<div class="musician_items">
 						<div class="hover_img1">
-							<a href="#" title="徐锋"
+							<a href="<%=request.getContextPath() %>/peohome/peoShowToHome.jhtml" title="徐锋"
 								><img class="lazy"
-								src="<%=request.getContextPath()%>/images/s6.jpg"
+								src="<%=request.getContextPath()%>/images/s5.jpg"
 								data-original="<%=request.getContextPath()%>/images/s5.jpg"
 								alt="徐锋" width="220" height="220" /></a>
 							<div class="hover_item">
-								<a href="#" title="徐锋"></a>
+								<a href="<%=request.getContextPath() %>/peohome/peoShowToHome.jhtml" title="徐锋"></a>
 							</div>
 						</div>
 						<h4>
-							<a href="#" title="徐锋"
+							<a href="<%=request.getContextPath() %>/peohome/peoShowToHome.jhtml" title="徐锋"
 							>徐锋</a><span class=" ml_10">&nbsp;</span>
 						</h4>
 						<span class="label label_id">身份：作曲、作词、编曲、演唱</span> <span

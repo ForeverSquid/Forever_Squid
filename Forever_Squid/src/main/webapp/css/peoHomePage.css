@@ -1,0 +1,163 @@
+
+*{
+    margin: 0;
+    padding: 0;
+}
+a{
+    text-decoration: none;
+}
+.container{
+    background: #EEEEEE;
+}
+header{
+    position: relative;
+    height: 340px;
+    width: 100%;
+    background: #EEEEEE;
+}
+.detail{
+    position: absolute;
+    top: 50%;
+    margin-top: -30px;
+    left: 50%;
+    margin-left: -200px;
+    height: 115px;
+    width: 400px;
+}
+.name{
+    font-size: 30px;
+    color: #FFFFFF;
+}
+.website{
+    font-size: 14px;
+    color: #FFFFFF;
+}
+nav{
+    position: absolute;
+    bottom: 0px;
+    height: 40px;
+    width: 100%;
+    background: #28cbb5;
+}
+.mid-nav{
+    float: left;
+    -webkit-transform: translate(440px);
+}
+.mid-nav span{
+    float: left;
+    text-align: center;
+    line-height: 40px;
+    padding: 0 25px 0 25px;
+    border-right: 1px solid #FFFFFF;
+    cursor: pointer;
+    color: #FFFFFF;
+    font-size: 14px;
+}
+.mid-nav span.selected{
+    float: left;
+    text-align: center;
+    line-height: 40px;
+    padding: 0 25px 0 25px;
+    border-right: 1px solid #FFFFFF;
+    cursor: pointer;
+    color: #28cbb5;
+    background: #fff;
+    font-size: 14px;
+}
+#last-child{
+    border:0;
+}
+.img{
+    float: left;
+    height: 220px;
+    width: 220px;
+    background: #ff00ff;
+    -webkit-transform: translate(200px,120px);
+}
+.content{
+    width: 950px;
+    height: 960px;
+    margin: 0 auto;
+    /*background: maroon;*/
+}
+.left{
+    width: 220px;
+    height: 100%;
+    float: left;
+}
+.vna{
+    height: 66px;
+}
+.left span{
+    float: left;
+    background: #ffffff;
+    text-align: center;
+    line-height: 40px;
+    color: #a4abb1;
+    font-size: 12px;
+}
+.visit{
+    width: 109px;
+    height: 66px;
+    border-right: 1px solid #a4abb1;
+}
+.audition{
+    width: 110px;
+    height: 66px;
+}
+.left .visit div,.left .audition div{
+    font-size: 18px;
+    color: #343434;
+    font-weight: normal;
+    line-height: 18px;
+}
+.two-img{
+    /*width: 220px;*/
+    height:38px;
+    margin-bottom: 10px;
+}
+.two-img a{
+    float: left;
+    width: 110px;
+    height:38px;
+    background: palegreen;
+}
+.me-tag{
+    height: 28px;
+    line-height: 28px;
+    font-size: 14px;
+    color: #333;
+    clear: both;
+    margin-top: 40px;
+}
+.spec-tags{
+    width: 216px;
+    height:38px;
+    padding: 2px;
+}
+.single-tag{
+    float: left;
+    width: 68px;
+    height: 26px;
+    line-height: 26px;
+    background: #39dec8;
+    margin: 4px 0;
+    text-align: center;
+    color: #fff;
+}
+.style{
+    margin-top: 70px;
+}
+.right{
+    width: 700px;
+    height: 960px;
+    margin-left: 30px;
+    background: lime;
+    float: left;
+}
+.temp{
+    display: none;
+}
+.firstP{
+    display: block;
+}

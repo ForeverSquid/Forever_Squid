@@ -1,7 +1,7 @@
 <%@ page language="java" import="java.util.*,com.Forever.model.*"
 	pageEncoding="UTF-8"%>
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
-<div style="position:fixed;width:100%;height:5%;background-color:black;">
+<div style="position:fixed;width:100%;height:6%;background-color:black;">
 	<%@ include file="mas.jsp"%>
 
 	<div align="right">
@@ -23,14 +23,14 @@
 <br />
 <br />
 
-<div style="background-color:#000000;height: 13%">
+<div style="background-color:#000000;height: 10%">
 	<div style="float:right;width:40%;">
 		<h1 style="color:white;">
 			<p>音乐发布、微博、空间的某某系统</p>
 		</h1>
 	</div>
 	<div style="float:right;width:50%;height:100%;">
-		<a href="#"> <img width="30%" height="100%"
+		<a href="#"> <img width="20%" height="100%"
 			src="<%=request.getContextPath()%>/images/logo.png" /></a>
 	</div>
 </div>

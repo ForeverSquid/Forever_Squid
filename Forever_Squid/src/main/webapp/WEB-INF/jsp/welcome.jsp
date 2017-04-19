@@ -24,7 +24,8 @@
 	-->
 </head>
 
-<body style="background-image: url('<%=request.getContextPath()%>/images/topAndLunbo/xing.png');">
+<%-- <body style="background-image: url('<%=request.getContextPath()%>/images/topAndLunbo/xing.png');"> --%>
+<body>
 	<a name="top" id="top"></a>
 	
 	<!-- 页头 -->
