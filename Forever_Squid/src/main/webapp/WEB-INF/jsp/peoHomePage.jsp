@@ -21,6 +21,65 @@
 
 <link rel="stylesheet"
 	href="<%=request.getContextPath()%>/css/peoHomePage.css" />
+	
+<link rel="stylesheet" type="text/css" href="<%=request.getContextPath()%>/css/zeroModal.css" />
+<script src="<%=request.getContextPath()%>/js/jquery.min.js"></script>
+<script src="<%=request.getContextPath()%>/js/zeroModal.js"></script>
+<style type="text/css">
+ol {
+	counter-reset: li;
+	list-style: none;
+	*list-style: decimal;
+	font: 13px 'trebuchet MS', 'lucida sans';
+	padding: 0;
+	margin-bottom: 4em;
+	text-shadow: 0 1px 0 rgba(255, 255, 255, .5);
+}
+
+ol ol {
+	margin: 0 0 0 2em;
+}
+
+.rounded-list a {
+	position: relative;
+	display: block;
+	padding: .4em .4em .4em 2em;
+	*padding: .4em;
+	margin: .8em 0;
+	background: #ddd;
+	color: #444;
+	text-decoration: none;
+	border-radius: .3em;
+	transition: all .3s ease-out;
+}
+
+.rounded-list a:hover {
+	background: #eee;
+}
+
+.rounded-list a:hover:before {
+	transform: rotate(360deg);
+}
+
+.rounded-list a:before {
+	content: counter(li);
+	counter-increment: li;
+	position: absolute;
+	left: -1.3em;
+	top: 50%;
+	margin-top: -1.3em;
+	background: #87ceeb;
+	height: 2em;
+	width: 2em;
+	line-height: 2em;
+	border: .3em solid #fff;
+	text-align: center;
+	font-weight: bold;
+	border-radius: 2em;
+	transition: all .3s ease-out;
+}
+
+</style>
 
 </head>
 <body>
@@ -66,7 +125,13 @@
 					</div>
 				</div>
 			</div>
+
 			<div class="right">
+				<div style="width:200px;left:220px;">
+					<ol class="rounded-list">
+						<li><a href="javascript:_iframe()">修改详细信息</a></li>
+					</ol>
+				</div>
 				<div class="right-con">
 					<div class="main-page temp firstP">个人主页</div>
 					<div class="doc temp">档案</div>
@@ -82,14 +147,31 @@
 	<script src="<%=request.getContextPath()%>/js/peoHomeJquery.js"
 		type="text/javascript"></script>
 	<script type="text/javascript">
-$(function(){
-    $(".mid-nav span").on("click",function(){
-        $(this).addClass('selected').siblings().removeClass('selected')
-        $(".right-con div").eq($(this).index()).addClass("firstP").siblings().removeClass("firstP")
-    });
-})
-</script>
+		$(function() {
+			$(".mid-nav span").on(
+					"click",
+					function() {
+						$(this).addClass('selected').siblings().removeClass(
+								'selected')
+						$(".right-con div").eq($(this).index()).addClass(
+								"firstP").siblings().removeClass("firstP")
+					});
+		})
+	</script>
+	<script>
+		function _iframe() {
+			zeroModal.show({
+				title : '填写详细信息',
+				iframe : true,
+				url : 'href/secondRegister.jhtml',
+				width : '80%',
+				height : '80%',
+				cancel : true
+			});
+		}
+	</script>
 	<!-- 页脚 -->
+	<a href="a">adadsaddasdsa</a>
 	<%@ include file="pages/footer.jsp"%>
 </body>
 </html>

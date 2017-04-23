@@ -1,0 +1,74 @@
+
+*{margin: 0;}
+a:hover,a:link,a:visited,a:active{text-decoration: none;}
+.selectBox{
+	width: 1000px;
+	min-height: 500px;
+	border: 1px solid yellowgreen;
+	margin: 0 auto;
+}
+.clearAll{margin-left: 20px;color: #1F438D;}
+.searchTerm{
+	width: 100%;
+	min-height: 40px;
+	line-height: 40px;
+}
+.varietyBox{
+	border-top: 1px solid #666;
+}
+.varietyBox,.regionBox{
+	width: 100%;
+	min-height: 40px;
+	border-bottom: 1px solid #666;
+}
+.category{
+	width: 100px;
+	height: 40px;
+	background: #cccccc;
+	line-height: 40px;
+	float: left;
+	padding-left: 10px;
+}
+.varietyBox ul,.regionBox ul{width:860px;list-style: none}
+.varietyBox ul li,.regionBox ul li{float: left;padding: 0 15px;margin-right:10px;line-height: 40px;margin-left: 6px;}
+.varietyBox ul li a,.regionBox ul li a{color: #000}
+ .moreSelect{width: 60px;height: 30px;margin-top: 5px;background: none;border: 1px solid #cccccc;margin-right:10px;float: right;}
+.selected{background: #1F438D;display: inline-block;padding: 0 15px;margin-right: 10px;color: #FFFFFF;position: relative;}
+.resultBox .selected{margin: 5px 5px;}
+.selected .close{cursor: pointer;
+	line-height: 14px;
+	padding: 3px;
+	top: 0;
+	width: 15px;
+	text-align: center;
+	position: absolute;
+	right: 0;
+}
+.resultBox{
+	width: 780px;
+	padding-bottom: 5px;
+}
+.buttonBox{
+	width: 100%;
+	height: 36px;
+	overflow: hidden;
+	padding-top: 10px;
+	margin-bottom: 10px;
+	display: none;
+}
+.buttonBox button{
+	padding: 5px 10px;
+    border: 1px solid #cccccc;
+}
+.buttonBox .confirm{
+	margin-left: 860px;
+}
+.buttonBox .returnBack{
+ float: right;
+	margin-right: 10px;
+}
+.varietyBox:after,.regionBox:after{
+	content: "";
+	display: block;
+	clear: both;
+}

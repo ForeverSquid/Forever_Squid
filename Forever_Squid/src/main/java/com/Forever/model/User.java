@@ -1,7 +1,5 @@
 package com.Forever.model;
 
-import java.util.Date;
-
 public class User {
     private Integer id;
 

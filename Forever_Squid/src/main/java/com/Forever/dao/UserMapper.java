@@ -1,8 +1,8 @@
 package com.Forever.dao;
 
 import com.Forever.model.User;
-
 import com.Forever.model.UserExample;
+import com.Forever.model.Userhome;
 
 import java.util.List;
 
@@ -17,6 +17,8 @@ public interface UserMapper {
     int deleteByPrimaryKey(Integer id);
 
     void insert(User record);
+    
+    void insertUserhome(Userhome userh);
     
     public User login(User user);
 

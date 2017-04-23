@@ -103,4 +103,9 @@ public class HrefController {
 	public String peopShow(){
 		return "/peopShow";
 	}
+	
+	@RequestMapping("/secondRegister")
+	public String secondRegister(){
+		return "/pages/secondRegister";
+	}
 }
