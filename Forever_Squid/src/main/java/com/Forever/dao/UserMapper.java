@@ -18,8 +18,6 @@ public interface UserMapper {
 
     void insert(User record);
     
-    void insertUserhome(Userhome userh);
-    
     public User login(User user);
 
     int insertSelective(User record);

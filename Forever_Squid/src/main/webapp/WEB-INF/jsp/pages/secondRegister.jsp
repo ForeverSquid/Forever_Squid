@@ -33,6 +33,7 @@
 			个人风格:<input type="text" name="Style_tags"/><br> 
 			个性签名:<input type="text" name="Personalized_signature" /><br><br>
 			<input type="submit" value="修改">
+			<input type="hidden" name="id" value="${user.id}" />
 		</form>
 	</div>
 

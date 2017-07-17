@@ -5,8 +5,8 @@
 	<%@ include file="mas.jsp"%>
 
 	<div align="right">
-		<c:set var="user1" value="${SessionScope.user}" />
-		
+		<%-- <c:set var="user1" value="${SessionScope.user}" /> --%>
+		<a href="<%=request.getContextPath() %>/peohome/peoShowToHome.jhtml">个人主页</a>  <!-- 头像点击进入个人主页 -->
 		<c:if test="${empty user}">
 			<a href="<%=request.getContextPath()%>/href/login.jhtml"
 				style="color:yellow">登录</a>&nbsp;<a

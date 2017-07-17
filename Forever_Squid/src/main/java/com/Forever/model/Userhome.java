@@ -1,17 +1,15 @@
 package com.Forever.model;
 
-import java.io.File;
-
 public class Userhome {
 
 	private int id;
 	private int u_id;
 	private int visitcount;
 	private int listencount;
-	private File pic;
+	private byte[] pic;
 	private String music;
 	private String album;
-	private File photo;
+	private byte[] photo;
 	private int Identity_tag;
 	private int Style_tags;
 	private String Stage_name;
@@ -41,10 +39,10 @@ public class Userhome {
 	public void setListencount(int listencount) {
 		this.listencount = listencount;
 	}
-	public File getPic() {
+	public byte[] getPic() {
 		return pic;
 	}
-	public void setPic(File pic) {
+	public void setPic(byte[]pic) {
 		this.pic = pic;
 	}
 	public String getMusic() {
@@ -59,10 +57,10 @@ public class Userhome {
 	public void setAlbum(String album) {
 		this.album = album;
 	}
-	public File getPhoto() {
+	public byte[] getPhoto() {
 		return photo;
 	}
-	public void setPhoto(File photo) {
+	public void setPhoto(byte[] photo) {
 		this.photo = photo;
 	}
 	public int getIdentity_tag() {

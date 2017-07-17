@@ -1,4 +1,5 @@
-<%@ page language="java" import="java.util.*" pageEncoding="UTF-8"%>
+<%@ page language="java" import="java.util.*,com.Forever.model.*"
+	pageEncoding="UTF-8"%>
 <%
 	String path = request.getContextPath();
 	String basePath = request.getScheme() + "://"
@@ -21,8 +22,9 @@
 
 <link rel="stylesheet"
 	href="<%=request.getContextPath()%>/css/peoHomePage.css" />
-	
-<link rel="stylesheet" type="text/css" href="<%=request.getContextPath()%>/css/zeroModal.css" />
+
+<link rel="stylesheet" type="text/css"
+	href="<%=request.getContextPath()%>/css/zeroModal.css" />
 <script src="<%=request.getContextPath()%>/js/jquery.min.js"></script>
 <script src="<%=request.getContextPath()%>/js/zeroModal.js"></script>
 <style type="text/css">
@@ -78,7 +80,6 @@ ol ol {
 	border-radius: 2em;
 	transition: all .3s ease-out;
 }
-
 </style>
 
 </head>
@@ -90,7 +91,7 @@ ol ol {
 	<div class="container">
 		<header>
 		<div class="detail">
-			<div class="name">老帅比</div>
+			<div class="name"><%=((User) session.getAttribute("user")).getUsername()%></div>
 			<p class="website">www.eeewerwgsd.com</p>
 		</div>
 		<nav> <span class="mid-nav"> <span class="selected">个人主页</span>
@@ -134,16 +135,35 @@ ol ol {
 				</div>
 				<div class="right-con">
 					<div class="main-page temp firstP">个人主页</div>
-					<div class="doc temp">档案</div>
-					<div class="songs temp">歌曲</div>
-					<div class="record temp">专辑</div>
-					<div class="photo temp">相册</div>
-					<div class="audio temp">视频</div>
+					<div class="doc temp">
+						档案<br><%=((Userhome) session.getAttribute("huser")).getRegion()%>
+					</div>
+					<div class="songs temp">
+						上传歌曲
+						<form name="Form2" action="<%=path%>/upload/fileUpload.jhtml?fl=<%=((User) session.getAttribute("user")).getId()%>"
+							method="post" enctype="multipart/form-data">
+							<input type="file" name="file">
+							 <input type="submit"
+								value="upload" />
+						</form><br><br><%=((Userhome) session.getAttribute("huser")).getMusic()%>
+						<embed src="<%=((Userhome) session.getAttribute("huser")).getMusic()%>">
+					</div>
+					<div class="record temp">asdas</div>
+					<div class="photo temp">
+						<img src="images/touxiang/1.jpg" />
+						<img src="images/touxiang/2.jpg" />
+						<img src="images/touxiang/3.jpg" />
+						<img src="images/touxiang/4.jpg" />
+						<img src="images/touxiang/5.jpg" />
+						<img src="images/touxiang/6.jpg" />
+					</div>
+					<div class="audio temp">
+						<img alt="" src="images/zhuanji.png"/>
+					</div>
 				</div>
 			</div>
 		</div>
 	</div>
-
 	<script src="<%=request.getContextPath()%>/js/peoHomeJquery.js"
 		type="text/javascript"></script>
 	<script type="text/javascript">
@@ -171,7 +191,6 @@ ol ol {
 		}
 	</script>
 	<!-- 页脚 -->
-	<a href="a">adadsaddasdsa</a>
 	<%@ include file="pages/footer.jsp"%>
 </body>
 </html>

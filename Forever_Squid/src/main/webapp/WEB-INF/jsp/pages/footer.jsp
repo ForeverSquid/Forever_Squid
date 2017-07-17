@@ -2,13 +2,7 @@
 <h3 align="center"><a href="#top" target="_self">返回顶部</a></h3> 
 <div style="background-color:#000000; width:100%; height:30%">
 	<div style="width: 100%;height: 13%"></div>
-	
-	<!-- <div style="float:right;width:21%;">
-		<h4>特色功能</h4>
-	</div>
-	<div style="float:right;width:21%;">
-		<h4>网站</h4>	
-	</div> -->
+
 	
 	<table style="width: 100%;height: 30%">
 		<th>.</th>

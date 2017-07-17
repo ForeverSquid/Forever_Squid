@@ -94,14 +94,7 @@
 				$("#ts").html("用户名或密码不能为空~");
 				is_show();
 				return false;
-			} else {
-				var reg = /^[0-9A-Za-z]+$/;
-				if (!reg.exec(u.val())) {
-					$("#ts").html("用户名错误");
-					is_show();
-					return false;
-				}
-			}
+			} 
 		}); 
 		
 

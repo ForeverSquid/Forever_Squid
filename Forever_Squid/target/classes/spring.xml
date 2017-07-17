@@ -2,8 +2,7 @@
 <beans xmlns="http://www.springframework.org/schema/beans"
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:p="http://www.springframework.org/schema/p"
 	xmlns:context="http://www.springframework.org/schema/context"
-	xmlns:mvc="http://www.springframework.org/schema/mvc"
-	xmlns:tx="http://www.springframework.org/schema/tx"
+	xmlns:mvc="http://www.springframework.org/schema/mvc" xmlns:tx="http://www.springframework.org/schema/tx"
 	xsi:schemaLocation="
 	 http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-4.0.xsd  
         http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-4.0.xsd  
@@ -12,27 +11,34 @@
         http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-4.0.xsd	
 		http://www.springframework.org/schema/mvc
 		http://www.springframework.org/schema/mvc/spring-mvc-4.0.xsd">
-		
-	
-	
+
+
+
 	<!-- 包扫描器，扫描带@Service注解的类 -->
 	<!-- <context:component-scan base-package="com.Forever.service"></context:component-scan> -->
-		
+
 	<import resource="spring_mybatis.xml" />
-	
+
 	<!-- spring配置事务管理器 -->
-	<bean id="transactionManager" 
+	<bean id="transactionManager"
 		class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
 		<property name="dataSource" ref="dataSource" />
 	</bean>
-	
-	
+
+	<!-- 多部分文件上传 -->
+	<bean id="multipartResolver"
+		class="org.springframework.web.multipart.commons.CommonsMultipartResolver">
+		<property name="defaultEncoding" value="UTF-8" />
+		<property name="maxInMemorySize" value="10240"></property><!-- 最大内存大小 -->
+		<property name="uploadTempDir" value="/tmp/"></property>
+		<property name="maxUploadSize" value="-1"></property><!-- -1代表没有限制 -->
+	</bean>
+
 	<!-- 配置 Spirng 的 JdbcTemplate -->
- 	<bean id="jdbcTemplate"
-		class="org.springframework.jdbc.core.JdbcTemplate">
+	<bean id="jdbcTemplate" class="org.springframework.jdbc.core.JdbcTemplate">
 		<property name="dataSource" ref="dataSource"></property>
-	</bean>	 
-	
-	<mvc:default-servlet-handler/><!-- 只针对静态页，jsp可不用 -->
+	</bean>
+
+	<mvc:default-servlet-handler /><!-- 只针对静态页，jsp可不用 -->
 
 </beans>

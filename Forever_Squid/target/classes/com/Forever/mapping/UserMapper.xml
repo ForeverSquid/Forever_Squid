@@ -114,16 +114,6 @@
       #{qq,jdbcType=INTEGER}, #{birthday,jdbcType=VARCHAR}, #{registerDate,jdbcType=VARCHAR}, 
       #{rank,jdbcType=VARCHAR})
   </insert>
-  <insert id="insertUserhome" parameterType="com.Forever.model.Userhome" >
-    insert into userhome (id, u_id, visitcount, 
-      listencount, pic, Identity_tag, 
-      Style_tags, Stage_name, region, 
-      Personalized_signature)
-    values (#{id,jdbcType=INTEGER}, #{account,jdbcType=REAL}, #{username,jdbcType=VARCHAR}, 
-      #{password,jdbcType=VARCHAR}, #{sex,jdbcType=VARCHAR}, #{email,jdbcType=VARCHAR}, 
-      #{qq,jdbcType=INTEGER}, #{birthday,jdbcType=VARCHAR}, #{registerDate,jdbcType=VARCHAR}, 
-      #{rank,jdbcType=VARCHAR})
-  </insert>
   <insert id="insertSelective" parameterType="com.Forever.model.User" >
     insert into user
     <trim prefix="(" suffix=")" suffixOverrides="," >

@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.Forever.dao.UserHomeMapper">
+	<resultMap id="BaseResultMap" type="com.Forever.model.Userhome">
+		<id column="id" property="id" jdbcType="INTEGER" />
+		<result column="u_id" property="u_id" jdbcType="INTEGER" />
+		<result column="visitcount" property="visitcount" jdbcType="INTEGER" />
+		<result column="listencount" property="listencount" jdbcType="INTEGER" />
+		<result column="pic" property="pic" jdbcType="BLOB" />
+		<result column="music" property="music" jdbcType="VARCHAR" />
+		<result column="album" property="album" jdbcType="VARCHAR" />
+		<result column="photo" property="photo" jdbcType="BLOB" />
+		<result column="Identity_tag" property="Identity_tag" jdbcType="INTEGER" />
+		<result column="Style_tags" property="Style_tags" jdbcType="INTEGER" />
+		<result column="Stage_name" property="Stage_name" jdbcType="VARCHAR" />
+		<result column="region" property="region" jdbcType="VARCHAR" />
+		<result column="Personalized_signature" property="Personalized_signature"
+			jdbcType="VARCHAR" />
+	</resultMap>
+	<sql id="Base_Column_List">
+		id, u_id, visitcount, listencount, pic, music, album, photo,
+		Identity_tag,Style_tags , Stage_name , region , Personalized_signature
+	</sql>
+	<select id="selectAll" resultMap="BaseResultMap" parameterType="com.Forever.model.Userhome">
+		select
+		<include refid="Base_Column_List" />
+		from userhome
+		where u_id =  #{u_id,jdbcType=INTEGER}
+	</select>
+	<update id="updateUserHome" parameterType="com.Forever.model.Userhome">
+		update userhome set
+		pic = #{pic,jdbcType=BLOB},
+		Identity_tag =
+		#{Identity_tag,jdbcType=INTEGER},
+		Style_tags =
+		#{Style_tags,jdbcType=INTEGER},
+		Stage_name =
+		#{Stage_name,jdbcType=VARCHAR},
+		region = #{region,jdbcType=VARCHAR},
+		Personalized_signature = #{Personalized_signature,jdbcType=VARCHAR}
+		where u_id = #{u_id,jdbcType=INTEGER}
+	</update>
+	
+	<update id="savemusic" parameterType="com.Forever.model.Userhome">
+		update userhome set
+		music = #{music,jdbcType=VARCHAR}
+		where u_id = #{u_id,jdbcType=INTEGER}
+	</update>
+
+</mapper>
