@@ -8,6 +8,7 @@
 	<name>Forever_Squid Maven Webapp</name>
 	<url>http://maven.apache.org</url>
 	<dependencies>
+<!-- i study git from two month ago to now,i done now -->
 		<!-- https://mvnrepository.com/artifact/org.apache.commons/commons-io -->
 		<dependency>
 			<groupId>org.apache.commons</groupId>
